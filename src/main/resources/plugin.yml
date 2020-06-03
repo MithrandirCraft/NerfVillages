@@ -1,0 +1,8 @@
+name: NerfVillages
+version: ${project.version}
+main: es.mithrandircraft.nerfvillages.NerfVillages
+api-version: 1.15.2
+prefix: NerfVillages
+authors: [__Mithrandir__]
+description: Nerfs exploitable village mechanics such as trades and automatic farms
+website: www.mithrandircraft.es
