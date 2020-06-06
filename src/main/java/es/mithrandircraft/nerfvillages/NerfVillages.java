@@ -13,10 +13,10 @@ public final class NerfVillages extends JavaPlugin {
 
         //Event registring
         getServer().getPluginManager().registerEvents(new VillagerReplenishTradeEv(this), this);
+        //getServer().getPluginManager().registerEvents(new EntityBreedEv(this), this);
     }
 
     @Override
     public void onDisable() {
-
     }
 }
