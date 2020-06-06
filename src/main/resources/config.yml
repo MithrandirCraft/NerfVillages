@@ -1,6 +1,6 @@
 #Disable villager trade stock replenishing:
-NerfVillagerRestock: true
-#Time global restock (divided by 3, multiplied by 2, multiplied by online player amount):
-
-#Disable villager breeding:
+NerfVillagerReplenish: true
+#global restock time (ticks):
+GlobalRestockTime: 432000‬
+#Disable villager breeding (inactive):
 #DisableVillagerBreeding: true

@@ -16,10 +16,10 @@ public class VillagerReplenishTradeEv implements Listener {
     @EventHandler
     public void replenishEv(VillagerReplenishTradeEvent e)
     {
-        //System.out.println("replenish event triggered.");
-        if(mainClassAccess.getConfig().getBoolean("NerfVillagerRestock")){
-            //System.out.println("cancelling event.");
-            e.setCancelled(true);
+        if(!mainClassAccess.allowAReplenish && mainClassAccess.getConfig().getBoolean("NerfVillagerReplenish"))
+        {
+            e.setCancelled(true); //Cancel replenish if main class allowAReplenish isn't true && config also marks nerfing
         }
+        else mainClassAccess.allowAReplenish = false; //Next time this event is called it may be cancelled
     }
 }
