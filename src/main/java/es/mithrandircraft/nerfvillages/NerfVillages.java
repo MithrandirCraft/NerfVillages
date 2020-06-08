@@ -1,6 +1,7 @@
 package es.mithrandircraft.nerfvillages;
 
 import es.mithrandircraft.nerfvillages.events.VillagerReplenishTradeEv;
+import es.mithrandircraft.nerfvillages.events.EntityTransformEv;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -16,6 +17,7 @@ public final class NerfVillages extends JavaPlugin {
 
         //Event registring
         getServer().getPluginManager().registerEvents(new VillagerReplenishTradeEv(this), this);
+        getServer().getPluginManager().registerEvents(new EntityTransformEv(this), this);
         //getServer().getPluginManager().registerEvents(new EntityBreedEv(this), this);
     }
 

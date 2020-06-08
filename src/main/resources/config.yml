@@ -2,5 +2,9 @@
 NerfVillagerReplenish: true
 #global restock time (ticks):
 GlobalRestockTime: 432000‬
+#Stop villagers from curating:
+CancelVillagerCuration: true
+#Stop villagers from being infected
+CancelVillagerInfection: false
 #Disable villager breeding (inactive):
 #DisableVillagerBreeding: true
