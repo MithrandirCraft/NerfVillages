@@ -1,10 +1,27 @@
-#Disable villager trade stock replenishing:
-NerfVillagerReplenish: true
-#global restock time (ticks):
-GlobalRestockTime: 432000‬
-#Stop villagers from curating:
-CancelVillagerCuration: true
-#Stop villagers from being infected
-CancelVillagerInfection: false
-#Disable villager breeding (inactive):
+#Disable villager trade stock replenishing (inactive)
+#NerfVillagerReplenish: true
+#global restock time (ticks) (inactive)
+#GlobalRestockTime: 432000‬
+#NerfVillagerCuration (inactive)
+#NerfVillagerCuration: true
+#1 out of "VillagerCurationNerfRate" will get curated if "NerfVillagerCuration" is true (inactive)
+#VillagerCurationNerfRate: 10
+#Stop villagers from being infected (inactive)
+#CancelVillagerInfection: false
+#Villager will transform into a cod when switching back to "NONE" profession (default villager)
+ActivateKillVillagerProfessionSetNone: true
+#1 out of "KillVillagerProfessionSetNoneChance" villager profession sets to "NONE" be safe from being removed, if "ActivateKillVillagerProfessionSetNone" is true
+#this nerfs both villager career switching, and zombie villager curing (since cured villager gets set to NONE profession on revive)
+KillVillagerProfessionSetNoneChance: 10
+#Disable villager breeding (inactive, since there seems to be a spigot bug with villager reproduction, which already does the job for us):
 #DisableVillagerBreeding: true
+#Divide max trades per trade, for all trades, in order to nerf all item max amounts globally. Leave at 1 to disable
+MaxTradesNerfDivider: 2
+#Should master level villagers have a chance of disappearing on player interaction
+ActivateChanceMasterVillagerDisappear: true
+#1 out of "ChanceMasterVillagerDisappear" times that a player interacts with a master level villager, the villager will disappear
+ChanceMasterVillagerDisappear: 7
+#If a chance should be applied for enchanted books to be unlocked
+ActivateEnchantedBookChance: true
+#1 out of "EnchantedBookChance" trades will be unlocked if "EnchantedBookChanceActive" is true
+EnchantedBookChance: 10
