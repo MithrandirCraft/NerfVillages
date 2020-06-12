@@ -22,7 +22,7 @@ public class EntityTransformEv implements Listener {
         if(e.getTransformReason() == EntityTransformEvent.TransformReason.CURED && mainClassAccess.getConfig().getBoolean("NerfVillagerCuration"))
         {
             int randomInRange = ThreadLocalRandom.current().nextInt(1, mainClassAccess.getConfig().getInt("VillagerCurationNerfRate") + 1);
-            System.out.println("Result of villager revival chance: " + randomInRange);
+            //System.out.println("Result of villager revival chance: " + randomInRange);
             if(randomInRange != 1){
                 e.setCancelled(true);
                 e.getEntity().getWorld().playEffect(e.getEntity().getLocation(), Effect.SMOKE, 1);

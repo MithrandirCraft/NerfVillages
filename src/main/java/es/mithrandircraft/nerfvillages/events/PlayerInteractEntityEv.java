@@ -23,7 +23,7 @@ public class PlayerInteractEntityEv implements Listener {
         {
             if(((Villager) e.getRightClicked()).getVillagerLevel() == 5){ //Villager is master level
                 int randomInRange = ThreadLocalRandom.current().nextInt(1, mainClassAccess.getConfig().getInt("ChanceMasterVillagerDisappear") + 1);
-                System.out.println("Result of master villager disappear chance: " + randomInRange);
+                //System.out.println("Result of master villager disappear chance: " + randomInRange);
                 if(randomInRange == 1)
                 {
                     e.getRightClicked().remove();

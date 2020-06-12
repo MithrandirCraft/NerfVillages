@@ -18,19 +18,19 @@ public class VillagerCareerChangeEv implements Listener {
     @EventHandler
     public void careerChangeEv(VillagerCareerChangeEvent e)
     {
-        System.out.println("Profession change detected: " + e.getProfession());
+        //System.out.println("Profession change detected: " + e.getProfession());
 
         if(e.getProfession() == Villager.Profession.NONE) //Make sure it's not employment, since it would stop villagers from being cured (they automatically get employed to NONE)
         {
             if(mainClassAccess.getConfig().getBoolean("ActivateKillVillagerProfessionSetNone"))
             {
                 int randomInRange = ThreadLocalRandom.current().nextInt(1, mainClassAccess.getConfig().getInt("KillVillagerProfessionSetNoneChance") + 1);
-                System.out.println("Result of villager revival chance: " + randomInRange);
+                //System.out.println("Result of villager revival chance: " + randomInRange);
                 if(randomInRange != 1) {
                     e.getEntity().remove(); //Remove unemployed entity
                     e.getEntity().getWorld().playEffect(e.getEntity().getLocation(), Effect.SMOKE, 1);
                     e.getEntity().getWorld().spawnEntity(e.getEntity().getLocation(), EntityType.COD); //lol
-                    System.out.println("Unemployed entity removed");
+                    //System.out.println("Unemployed entity removed");
                 }
             }
         }
