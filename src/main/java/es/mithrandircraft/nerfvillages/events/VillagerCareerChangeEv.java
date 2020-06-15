@@ -5,6 +5,7 @@ import org.bukkit.Effect;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Villager;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.VillagerCareerChangeEvent;
 
@@ -15,7 +16,7 @@ public class VillagerCareerChangeEv implements Listener {
 
     public VillagerCareerChangeEv(NerfVillages mca) { mainClassAccess = mca; }
 
-    @EventHandler
+    @EventHandler (priority = EventPriority.LOW)
     public void careerChangeEv(VillagerCareerChangeEvent e)
     {
         //System.out.println("Profession change detected: " + e.getProfession());

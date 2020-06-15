@@ -3,6 +3,7 @@ package es.mithrandircraft.nerfvillages.events;
 import es.mithrandircraft.nerfvillages.NerfVillages;
 import org.bukkit.Effect;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityTransformEvent;
 
@@ -16,7 +17,7 @@ public class EntityTransformEv implements Listener {
         mainClassAccess = mca;
     }
 
-    @EventHandler
+    @EventHandler (priority = EventPriority.LOW)
     public void transformEv(EntityTransformEvent e)
     {
         if(e.getTransformReason() == EntityTransformEvent.TransformReason.CURED && mainClassAccess.getConfig().getBoolean("NerfVillagerCuration"))

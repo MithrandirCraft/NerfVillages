@@ -3,6 +3,7 @@ package es.mithrandircraft.nerfvillages.events;
 import es.mithrandircraft.nerfvillages.NerfVillages;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.VillagerAcquireTradeEvent;
 
@@ -15,7 +16,7 @@ public class VillagerAcquireTradeEv implements Listener {
     {
         mainClassAccess = mca;
     }
-    @EventHandler
+    @EventHandler (priority = EventPriority.LOW)
     public void acquireEv(VillagerAcquireTradeEvent e) {
         //System.out.println("Villager acquired trade. Initial uses: " + e.getRecipe().getMaxUses());
         //Items required to be nerfed with extra severity, using specific nerfs

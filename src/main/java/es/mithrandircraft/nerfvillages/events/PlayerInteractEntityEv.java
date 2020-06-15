@@ -5,6 +5,7 @@ import org.bukkit.Effect;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Villager;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 
@@ -17,7 +18,7 @@ public class PlayerInteractEntityEv implements Listener {
     {
         mainClassAccess = mca;
     }
-    @EventHandler
+    @EventHandler (priority = EventPriority.LOW)
     public void interactEv(PlayerInteractEntityEvent e) {
         if(e.getRightClicked().getType() == EntityType.VILLAGER && mainClassAccess.getConfig().getBoolean("ActivateChanceMasterVillagerDisappear"))
         {
