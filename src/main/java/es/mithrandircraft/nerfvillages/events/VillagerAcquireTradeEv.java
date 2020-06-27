@@ -28,7 +28,7 @@ public class VillagerAcquireTradeEv implements Listener {
             else e.getRecipe().setMaxUses(0);
             //System.out.println("Villager acquired trade should be rare. Readjusted uses: " + e.getRecipe().getMaxUses());
         }
-        else { //Item is not required to be rare or custom nerfed, apply regular nerf
+        else { //Item is not required to be rare or custom nerfed, apply regular nerf (normal MaxUsers / "MaxTradesNerfDivider)
             e.getRecipe().setMaxUses((int)Math.ceil(e.getRecipe().getMaxUses() / mainClassAccess.getConfig().getInt("MaxTradesNerfDivider")));
             //System.out.println("Villager acquired trade. Readjusted uses: " + e.getRecipe().getMaxUses());
         }

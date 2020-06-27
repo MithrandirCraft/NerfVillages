@@ -17,10 +17,14 @@ KillVillagerProfessionSetNoneChance: 10
 #DisableVillagerBreeding: true
 #Divide max trades per trade, for all trades, in order to nerf all item max amounts globally. Leave at 1 to disable
 MaxTradesNerfDivider: 2
-#Should master level villagers have a chance of disappearing on player interaction
-ActivateChanceMasterVillagerDisappear: true
-#1 out of "ChanceMasterVillagerDisappear" times that a player interacts with a master level villager, the villager will disappear
-ChanceMasterVillagerDisappear: 7
+#Should master level villagers have a chance of disappearing on player interaction (inactive)
+#ActivateChanceMasterVillagerDisappear: true
+#1 out of "ChanceMasterVillagerDisappear" times that a player interacts with a master level villager, the villager will disappear (inactive)
+#ChanceMasterVillagerDisappear: 7
+#How many interactions with a Master level villager until locked trades become very common:
+EnhancedTradeLockingAfterThresholdInteractions: 3
+#1 out of "TimesTradesLocked" after "EnhancedTradeLockingAfterThresholdInteractions" is reached, the trades won't be locked
+TimesTradesLocked: 20
 #If a chance should be applied for enchanted books to be unlocked
 ActivateEnchantedBookChance: true
 #1 out of "EnchantedBookChance" trades will be unlocked if "EnchantedBookChanceActive" is true
