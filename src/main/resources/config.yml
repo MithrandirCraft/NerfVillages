@@ -1,4 +1,4 @@
-#Villager will transform into a cod when switching back to "NONE" profession (default villager)
+#Villager will transform into a vindicator when switching back to "NONE" profession (default villager)
 ActivateKillVillagerProfessionSetNone: true
 #1 out of "KillVillagerProfessionSetNoneChance" villager profession sets to "NONE" be safe from being removed, if "ActivateKillVillagerProfessionSetNone" is true
 #this nerfs both villager career switching, and zombie villager curing (since cured villager gets set to NONE profession on revive)
