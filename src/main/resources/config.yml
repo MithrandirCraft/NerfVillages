@@ -1,26 +1,14 @@
-#Disable villager trade stock replenishing (inactive)
-#NerfVillagerReplenish: true
-#global restock time (ticks) (inactive)
-#GlobalRestockTime: 432000‬
-#NerfVillagerCuration (inactive)
-#NerfVillagerCuration: true
-#1 out of "VillagerCurationNerfRate" will get curated if "NerfVillagerCuration" is true (inactive)
-#VillagerCurationNerfRate: 10
-#Stop villagers from being infected (inactive)
-#CancelVillagerInfection: false
 #Villager will transform into a cod when switching back to "NONE" profession (default villager)
 ActivateKillVillagerProfessionSetNone: true
 #1 out of "KillVillagerProfessionSetNoneChance" villager profession sets to "NONE" be safe from being removed, if "ActivateKillVillagerProfessionSetNone" is true
 #this nerfs both villager career switching, and zombie villager curing (since cured villager gets set to NONE profession on revive)
-KillVillagerProfessionSetNoneChance: 10
-#Disable villager breeding (inactive, since there seems to be a spigot bug with villager reproduction, which already does the job for us):
-#DisableVillagerBreeding: true
+KillVillagerProfessionSetNoneChance: 3
+#Villager reproduction will be interrupted a configured amount of times
+ReduceVillagerBreeding: true
+#1 out of "InterruptVillagerReproductionChance" villager reproductions will get cancelled, if "ReduceVillagerBreeding" is set to true
+InterruptVillagerReproductionChance: 10
 #Divide max trades per trade, for all trades, in order to nerf all item max amounts globally. Leave at 1 to disable
 MaxTradesNerfDivider: 2
-#Should master level villagers have a chance of disappearing on player interaction (inactive)
-#ActivateChanceMasterVillagerDisappear: true
-#1 out of "ChanceMasterVillagerDisappear" times that a player interacts with a master level villager, the villager will disappear (inactive)
-#ChanceMasterVillagerDisappear: 7
 #How many interactions with a Master level villager until locked trades become very common:
 EnhancedTradeLockingAfterThresholdInteractions: 3
 #1 out of "TimesTradesLocked" after "EnhancedTradeLockingAfterThresholdInteractions" is reached, the trades won't be locked
