@@ -9,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityTransformEvent;
 
 public class EntityTransformEv implements Listener {
-    private NerfVillages mainClassAccess;
+    private final NerfVillages mainClassAccess;
 
     public EntityTransformEv(NerfVillages mca) {
         this.mainClassAccess = mca;
