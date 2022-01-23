@@ -1,8 +1,8 @@
 #Villager will transform into a vindicator when switching back to "NONE" profession (default villager)
 ActivateKillVillagerProfessionSetNone: true
 #1 out of "KillVillagerProfessionSetNoneChance" villager profession sets to "NONE" be safe from being removed, if "ActivateKillVillagerProfessionSetNone" is true
-#this nerfs both villager career switching, and zombie villager curing (since cured villager gets set to NONE profession on revive)
-KillVillagerProfessionSetNoneChance: 3
+#this nerfs villager career switching, zombie villager curing, and villager reproduction (since cured villager gets set to NONE profession on revive and birth)
+KillVillagerProfessionSetNoneChance: 2
 #Villager reproduction will be interrupted a configured amount of times
 ReduceVillagerBreeding: true
 #1 out of "InterruptVillagerReproductionChance" villager reproductions will get cancelled, if "ReduceVillagerBreeding" is set to true
