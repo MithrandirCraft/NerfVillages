@@ -6,7 +6,7 @@ KillVillagerProfessionSetNoneChance: 2
 #Villager reproduction will be interrupted a configured amount of times
 ReduceVillagerBreeding: true
 #1 out of "InterruptVillagerReproductionChance" villager reproductions will get cancelled, if "ReduceVillagerBreeding" is set to true
-InterruptVillagerReproductionChance: 10
+InterruptVillagerReproductionChance: 20
 #Divide max trades per trade, for all trades, in order to nerf all item max amounts globally. Leave at 1 to disable
 MaxTradesNerfDivider: 2
 #How many interactions with a Master level villager until locked trades become very common:
@@ -17,3 +17,5 @@ TimesTradesLocked: 20
 ActivateEnchantedBookChance: true
 #1 out of "EnchantedBookChance" trades will be unlocked if "EnchantedBookChanceActive" is true
 EnchantedBookChance: 10
+PillagerEmeraldDropRate: 0.05
+EvokerEmeraldDropRate: 0.3
