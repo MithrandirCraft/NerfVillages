@@ -9,6 +9,7 @@ import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
+import java.util.ListIterator;
 
 public class EntityDeathEv implements Listener {
     private final NerfVillages mainClassAccess;
@@ -21,13 +22,12 @@ public class EntityDeathEv implements Listener {
         if(e.getEntity().getType() == EntityType.PILLAGER)
         {
             List<ItemStack> drops = e.getDrops();
-            for(ItemStack drop : drops)
-            {
-                if (drop.getType() == Material.EMERALD)
-                {
+            ListIterator<ItemStack> iter = drops.listIterator();
+            while(iter.hasNext()){
+                if (iter.next().getType() == Material.EMERALD) {
                     if (Math.random() > mainClassAccess.getConfig().getDouble("PillagerEmeraldDropRate"))
                     {
-                        drops.remove(drop);
+                        iter.remove();
                     }
                 }
             }
@@ -35,13 +35,12 @@ public class EntityDeathEv implements Listener {
         else if (e.getEntity().getType() == EntityType.EVOKER)
         {
             List<ItemStack> drops = e.getDrops();
-            for(ItemStack drop : drops)
-            {
-                if (drop.getType() == Material.EMERALD)
-                {
+            ListIterator<ItemStack> iter = drops.listIterator();
+            while(iter.hasNext()){
+                if (iter.next().getType() == Material.EMERALD) {
                     if (Math.random() > mainClassAccess.getConfig().getDouble("EvokerEmeraldDropRate"))
                     {
-                        drops.remove(drop);
+                        iter.remove();
                     }
                 }
             }
