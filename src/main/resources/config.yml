@@ -17,5 +17,6 @@ TimesTradesLocked: 20
 ActivateEnchantedBookChance: true
 #1 out of "EnchantedBookChance" trades will be unlocked if "EnchantedBookChanceActive" is true
 EnchantedBookChance: 10
-PillagerEmeraldDropRate: 0.05
-EvokerEmeraldDropRate: 0.3
+PillagerEmeraldDropRate: 0.0025
+EvokerEmeraldDropRate: 0.015
+EvokerTotemDropRate: 0.1

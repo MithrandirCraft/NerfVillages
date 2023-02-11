@@ -43,6 +43,12 @@ public class EntityDeathEv implements Listener {
                         iter.remove();
                     }
                 }
+                else if (iter.next().getType() == Material.TOTEM_OF_UNDYING) {
+                    if (Math.random() > mainClassAccess.getConfig().getDouble("EvokerTotemDropRate"))
+                    {
+                        iter.remove();
+                    }
+                }
             }
         }
     }
