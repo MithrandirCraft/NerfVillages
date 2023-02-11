@@ -1,6 +1,7 @@
 package es.mithrandircraft.nerfvillages.events;
 
 import es.mithrandircraft.nerfvillages.NerfVillages;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
@@ -36,15 +37,18 @@ public class EntityDeathEv implements Listener {
         {
             List<ItemStack> drops = e.getDrops();
             ListIterator<ItemStack> iter = drops.listIterator();
-            while(iter.hasNext()){
-                if (iter.next().getType() == Material.EMERALD) {
-                    if (Math.random() > mainClassAccess.getConfig().getDouble("EvokerEmeraldDropRate"))
+            while(iter.hasNext())
+            {
+                Material itemMaterial = iter.next().getType();
+                double chance = Math.random();
+                if (itemMaterial == Material.EMERALD) {
+                    if (chance > mainClassAccess.getConfig().getDouble("EvokerEmeraldDropRate"))
                     {
                         iter.remove();
                     }
                 }
-                else if (iter.next().getType() == Material.TOTEM_OF_UNDYING) {
-                    if (Math.random() > mainClassAccess.getConfig().getDouble("EvokerTotemDropRate"))
+                else if (itemMaterial == Material.TOTEM_OF_UNDYING) {
+                    if (chance > mainClassAccess.getConfig().getDouble("EvokerTotemDropRate"))
                     {
                         iter.remove();
                     }
