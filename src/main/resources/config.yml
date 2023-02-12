@@ -17,9 +17,9 @@ TimesTradesLocked: 20
 ActivateEnchantedBookChance: true
 #1 out of "EnchantedBookChance" trades will be unlocked if "EnchantedBookChanceActive" is true
 EnchantedBookChance: 10
-#The following drop rates are applied to the base vanilla drop rate, so if an item would have been dropped in vanilla,
+#The following drop rates are applied to the base vanilla drop rate, so if an item had been dropped in vanilla,
 #an extra chance is rolled within that drop rate:
-PillagerEmeraldDropRate: 0.0025
-VindicatorEmeraldDropRate: 0.0025
-EvokerEmeraldDropRate: 0.015
-EvokerTotemDropRate: 0.1
+PillagerEmeraldDropRate: 0.05
+VindicatorEmeraldDropRate: 0.05
+EvokerEmeraldDropRate: 0.25
+EvokerTotemDropRate: 0.025
