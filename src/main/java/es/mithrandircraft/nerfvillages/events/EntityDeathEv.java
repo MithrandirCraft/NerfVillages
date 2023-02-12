@@ -20,20 +20,39 @@ public class EntityDeathEv implements Listener {
     @EventHandler
     public void deathEv(EntityDeathEvent e)
     {
-        if(e.getEntity().getType() == EntityType.PILLAGER)
+        EntityType entityType = e.getEntity().getType();
+
+        if(entityType == EntityType.PILLAGER)
         {
             List<ItemStack> drops = e.getDrops();
             ListIterator<ItemStack> iter = drops.listIterator();
             while(iter.hasNext()){
-                if (iter.next().getType() == Material.EMERALD) {
-                    if (Math.random() > mainClassAccess.getConfig().getDouble("PillagerEmeraldDropRate"))
+                Material itemMaterial = iter.next().getType();
+                double chance = Math.random();
+                if (itemMaterial == Material.EMERALD) {
+                    if (chance > mainClassAccess.getConfig().getDouble("PillagerEmeraldDropRate"))
                     {
                         iter.remove();
                     }
                 }
             }
         }
-        else if (e.getEntity().getType() == EntityType.EVOKER)
+        else if(entityType == EntityType.VINDICATOR)
+        {
+            List<ItemStack> drops = e.getDrops();
+            ListIterator<ItemStack> iter = drops.listIterator();
+            while(iter.hasNext()){
+                Material itemMaterial = iter.next().getType();
+                double chance = Math.random();
+                if (itemMaterial == Material.EMERALD) {
+                    if (chance > mainClassAccess.getConfig().getDouble("VindicatorEmeraldDropRate"))
+                    {
+                        iter.remove();
+                    }
+                }
+            }
+        }
+        else if (entityType == EntityType.EVOKER)
         {
             List<ItemStack> drops = e.getDrops();
             ListIterator<ItemStack> iter = drops.listIterator();
