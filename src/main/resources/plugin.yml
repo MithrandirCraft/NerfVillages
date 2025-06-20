@@ -6,3 +6,9 @@ prefix: NerfVillages
 authors: [__Mithrandir__]
 description: Nerfs exploitable village mechanics such as trades and automatic farms
 website: www.mithrandircraft.es
+commands:
+  NerfVillages:
+    description: Does nothing on it's own. Requires further arguments.
+    aliases: nv
+  NV Reload:
+    description: Will reload the plugin's configuration when specified as nnpzp argument.
