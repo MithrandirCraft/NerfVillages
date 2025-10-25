@@ -13,6 +13,10 @@ MaxTradesNerfDivider: 2
 EnhancedTradeLockingAfterThresholdInteractions: 3
 #1 out of "TimesTradesLocked" after "EnhancedTradeLockingAfterThresholdInteractions" is reached, the trades won't be locked
 TimesTradesLocked: 20
+#If a chance should be applied for enchanted books to be unlocked
+ActivateEnchantedBookChance: true
+#1 out of "EnchantedBookChance" trades will be unlocked if "EnchantedBookChanceActive" is true
+EnchantedBookChance: 10
 #The following drop rates are applied to the base vanilla drop rate, so if an item had been dropped in vanilla,
 #an extra chance is rolled within that drop rate:
 PillagerEmeraldDropRate: 0.05

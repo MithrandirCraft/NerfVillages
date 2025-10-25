@@ -18,6 +18,7 @@ public final class NerfVillages extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EntityDeathEv(this), this);
         getServer().getPluginManager().registerEvents(new PlayerInteractEntityEv(this), this);
         getServer().getPluginManager().registerEvents(new VillagerCareerChangeEv(this), this);
+        getServer().getPluginManager().registerEvents(new VillagerAcquireTradeEv(this), this);
 
         //Commands:
         getCommand("nerfvillages").setExecutor(new CommandNerfVillages(this));
